@@ -1,4 +1,5 @@
-This is a starter kit for EVM compatible dapps.
+## Afriverse
+Afriverse is a community driven web3 education platform for africans by africans. We incentivise learning and the upload of quality content by rewarding our learners with tokens for each course completed, and rewarding the content creators with tokens. This ensures creators always aim to create more quality content, and that learners aim to learn more. Our token AFCT also serves as a governance token, and as the platform grows it would be used in making more key decisions by the community.
 
 ## Getting Started
 
