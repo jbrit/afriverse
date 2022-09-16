@@ -2,6 +2,7 @@ import Navbar from "$components/Navbar";
 import { Button, Text } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import router from "next/router";
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
           borderRadius: "1rem",
           maxWidth: 700,
           margin: "8rem auto",
-          padding: "4rem 2rem"
+          padding: "4rem 2rem",
         }}
       >
         <Text color="white" h1>
@@ -36,7 +37,14 @@ const Home: NextPage = () => {
         <Text color="white" h4>
           A Web3 education platform for africans by africans.
         </Text>
-        <Button color={"gradient"}>Get started</Button>
+        <Button
+          color={"gradient"}
+          onClick={() => {
+            router.push("/explore");
+          }}
+        >
+          Get started
+        </Button>
       </div>
     </div>
   );
