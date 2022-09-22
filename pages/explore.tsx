@@ -17,8 +17,9 @@ import { useEffect, useState } from "react";
 import LessonCard from "$components/LessonCard";
 import { WorldIDWidget, VerificationResponse } from "@worldcoin/id";
 import { NFTStorage, File } from "nft.storage";
-import { nftContract } from "contract-factory";
+import { AFCT_ADDR, nftContract } from "contract-factory";
 import { defaultAbiCoder as abi } from "@ethersproject/abi";
+import Moralis from "$utils/moralis";
 
 const keyA =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGRFOUM2NDAyODVBNEI3MjEwN2Q2MEMwZj";
@@ -31,7 +32,6 @@ const Explore: NextPage = () => {
   const signer = useSigner();
   const o = useProvider();
   const provider = signer.data ?? o;
-  console.log(provider);
   const { address, isConnected, isDisconnected } = useAccount();
   const [imageURl, setImageUrl] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -44,6 +44,28 @@ const Explore: NextPage = () => {
       enabled: !!address,
     }
   );
+  const {
+    isSuccess: balanceSuccess,
+    isLoading: balanceLoading,
+    data: balance,
+    isError: balanceError,
+  } = useQuery(
+    ["balance"],
+    () =>
+      Moralis.EvmApi.token
+        .getWalletTokenBalances({
+          address: address!,
+          chain: 80001,
+          tokenAddresses: [AFCT_ADDR],
+        })
+        .then((res) => res),
+    {
+      enabled: !!address,
+    }
+  );
+  const [afctBalance, setAFCTBalance] = useState<
+    typeof balance | Array<{ value: string }>
+  >(balance);
 
   async function storeAsset(image: File) {
     setImageUrl(null);
@@ -67,10 +89,10 @@ const Explore: NextPage = () => {
     }
   }
 
-  useEffect(() => {
-    remove();
-    refetch();
-  }, [address]);
+  // useEffect(() => {
+  //   remove();
+  //   refetch();
+  // }, [address]);
 
   return (
     <div>
@@ -101,6 +123,14 @@ const Explore: NextPage = () => {
               )}
               {isSuccess && data && (
                 <>
+                  <Text h4>
+                    <>
+                      AFCT Balance:{" "}
+                      {afctBalance &&
+                        (afctBalance as Array<{ value: string }>).map(({ value }) => (
+                          <span>{value}</span>))}
+                    </>
+                  </Text>
                   <Text h4>
                     Welcome, so this page contains all you would need to get
                     started in this space, make sure to complete lessons and
@@ -167,8 +197,6 @@ const Explore: NextPage = () => {
                     enableTelemetry
                     onSuccess={(response) => {
                       setVerificationResponse(response);
-                      console.log(response);
-                      // nftContract(provider).mintNFT(address!, merkle_root, nullifier_hash, proof, address!, imageURl!);
                     }} // you'll actually want to pass the proof to the API or your smart contract
                     onError={(error: any) => console.error(error)}
                   />

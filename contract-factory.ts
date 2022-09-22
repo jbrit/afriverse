@@ -8,3 +8,5 @@ export const nftContract = (provider: any) => {
 export const coinContract = (provider: any) => {
     return AfriverseCommunityToken__factory.connect("0xE79DaD9Fdb2FdA15428831a2e77F337EE534214f", provider)
 };
+
+export const AFCT_ADDR = "0xE79DaD9Fdb2FdA15428831a2e77F337EE534214f";
