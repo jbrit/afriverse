@@ -128,7 +128,7 @@ const Explore: NextPage = () => {
                       AFCT Balance:{" "}
                       {afctBalance &&
                         (afctBalance as Array<{ value: string }>).map(({ value }) => (
-                          <span>{value}</span>))}
+                          <span key={value}>{value}</span>))}
                     </>
                   </Text>
                   <Text h4>
