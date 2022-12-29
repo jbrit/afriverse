@@ -12,6 +12,9 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { useState } from "react";
+import "public/fonts/GTWalsheimPro/stylesheet.css";
+import "public/fonts/PPMonumentExtended/stylesheet.css";
+
 
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);

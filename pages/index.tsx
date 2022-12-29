@@ -1,8 +1,9 @@
-import Navbar from "$components/Navbar";
-import { Button, Text } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import router from "next/router";
+import Link from "next/link";
+import { Search } from "$svgs/search";
+import { Swoosh } from "$svgs/swoosh";
+import { ScrollDown } from "$svgs/scroll-down";
 
 const Home: NextPage = () => {
   return (
@@ -15,37 +16,62 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <div
-        style={{
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "rgba(255, 255, 255, 0.1)",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          borderRadius: "1rem",
-          maxWidth: 700,
-          margin: "8rem auto",
-          padding: "4rem 2rem",
-        }}
-      >
-        <Text color="white" h1>
-          Welcome To <i>Afriverse</i>
-        </Text>
-        <Text color="white" h4>
-          A Web3 education platform for africans by africans.
-        </Text>
-        <Button
-          color={"gradient"}
-          onClick={() => {
-            router.push("/explore");
+      <header className="home-header">
+        <nav className="navbar">
+          <div className="container navbar__container">
+            <span className="navbar__brand title-font">Afriverse</span>
+            <div>
+              <Link href="/">
+                <a className="navbar__link" style={{ fontWeight: 700 }}>Home</a>
+              </Link>
+              <Link href="/"><a className="navbar__link">How it works?</a></Link>
+              <button className="navbar__btn">Connect Wallet</button>
+            </div>
+          </div>
+        </nav>
+        <p className="hero-text title-font">
+          <div> Unlimited access to</div>
+          <div>
+            Web3{" "}
+            <span className="contents-text">
+              contents <Swoosh className="contents-text-swoosh" />
+            </span>
+          </div>
+        </p>
+        <form className="search-bar">
+          <Search />
+          <input
+            className="search-bar__input"
+            type="text"
+            placeholder="Search for any course"
+          />
+        </form>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            height: 0,
+            width: 0,
+            borderTop: "120px solid transparent",
+            borderLeft: "50vw solid white",
+            zIndex: -1,
           }}
-        >
-          Get started
-        </Button>
-      </div>
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            height: 0,
+            width: 0,
+            borderTop: "120px solid transparent",
+            borderRight: "50vw solid white",
+            zIndex: -1,
+          }}
+        ></div>
+        <ScrollDown style={{position: "absolute", bottom: "20%", right: "9rem"}}/>
+      </header>
     </div>
   );
 };
