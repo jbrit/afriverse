@@ -13,7 +13,7 @@ export function Swoosh(props: SVGProps<SVGSVGElement>) {
       <path
         d="M1.00003 18.9046C36.468 6.55897 124.297 -11.1874 191.869 16.592"
         stroke="#E44E62"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </svg>
   );
