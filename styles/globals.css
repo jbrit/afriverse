@@ -15,124 +15,47 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  user-select: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* new css style */
-.container {
-  padding: 0 94px;
-}
-.home-header {
-  background-color: #fce9eb;
-  position: relative;
-  z-index: 0;
-  background: url("../public/grid.svg"), linear-gradient(#fce9eb, #fce9eb);
-  background-attachment: fixed;
-}
-
-.hero-text {
-  margin: 154px auto 95px;
-  max-width: 740px;
-  font-size: 52px;
-  text-align: center;
-  font-weight: 400;
-  line-height: 120%;
-}
-
-.contents-text {
-  color: #e44e62;
-  position: relative;
-}
-
-.contents-text-swoosh {
-  position: absolute;
-  bottom: -1.5rem;
-  right: 1rem;
-}
-
-.search-bar {
-  background: #ffffff;
-  max-width: 740px;
-  height: 94px;
-  margin: 0 auto;
-  border: 3px #1f1f1f solid;
-  border-bottom: 6px #1f1f1f solid;
-  border-right: 6px #1f1f1f solid;
-  padding: 34.5px;
-  display: flex;
-  align-items: center;
-  z-index: 5;
-}
-
-.search-bar__input {
-  width: 100%;
-  border: none;
-  font-size: 22px;
-  line-height: 23px;
-  padding-left: 12px;
-  color: rgba(31, 31, 31, 0.67);
-}
-
-.navbar {
-  padding: 30px 0;
-  border-bottom: 2px #1f1f1f solid;
-}
-
-.navbar__brand {
-  font-weight: 800;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.navbar__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar__link {
-  margin: 0 21px;
-  font-size: 20px;
-  line-height: 21px;
-}
-
-.navbar__btn {
-  border: 2px #1f1f1f solid;
-  border-bottom: 3.3px #1f1f1f solid;
-  font-size: 18px;
-  height: 64px;
-  padding: 0 30px;
-  margin-left: 40px;
-  background: transparent;
-  cursor: pointer;
-  background: #ffb700;
-}
-
-.navbar__btn:hover {
-  background: #f2ad00;
-}
-
-.navbar__btn:active {
-  border-bottom: 2px #1f1f1f solid;
-}
-
-.afriverse-btn {
-  border: 2px #1f1f1f solid;
-  border-bottom: 3.3px #1f1f1f solid;
-  font-size: 18px;
-  height: 64px;
-  padding: 0 30px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.afriverse-btn:active {
-  border-bottom: 2px #1f1f1f solid;
-}
-
 .title-font {
   font-family: "PP Monument Extended";
+}
+
+.container {
+  padding: 0 1rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scroll-down {
+  display: none;
+}
+.bottom-triangle {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  border-top: 120px solid transparent;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .scroll-down {
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+    right: 2rem;
+  }
 }
