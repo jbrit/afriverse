@@ -98,7 +98,7 @@
   .hero-text {
     font-size: 42px;
   }
-  .search-bar{
+  .search-bar {
     height: 79px;
     padding: 25px;
   }
@@ -120,7 +120,7 @@
   .hero-text {
     font-size: 52px;
   }
-  .search-bar{
+  .search-bar {
     height: 94px;
     padding: 34.5px;
   }
@@ -204,4 +204,11 @@
   cursor: pointer;
   background: #ffb700;
   user-select: none;
+}
+.small-btn:hover {
+  background: #f2ad00;
+}
+
+.small-btn:active {
+  border-bottom: 2px #1f1f1f solid;
 }
