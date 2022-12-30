@@ -20,6 +20,15 @@ a {
 
 * , *::before, *::after{
   box-sizing: border-box;
+  color: #1f1f1f;
+}
+
+button{
+  color: #1f1f1f;
+}
+
+input:focus{
+  outline: none;
 }
 
 .title-font {

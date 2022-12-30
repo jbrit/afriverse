@@ -8,7 +8,7 @@ import CourseCard from "$components/CourseCard";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Afriverse</title>
         <meta
@@ -89,25 +89,51 @@ const Home: NextPage = () => {
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
       </section>
-      <div className="title-font ribbon-holder" style={{overflow: "hidden", position: "relative" }}>
-        <div
-        className="ribbon ribbon-left"
-        >
+      <section
+        className="title-font ribbon-holder"
+        style={{ overflow: "hidden", position: "relative" }}
+      >
+        <div className="ribbon ribbon-left">
           <span>50+ Courses</span>
           <span className="left-border">200+ Learners</span>
           <span className="left-border">4.5/5.0 Ratings</span>
           <span className="left-border">500+ Minutes</span>
         </div>
-        <div
-        className="ribbon ribbon-right"
-        >
+        <div className="ribbon ribbon-right">
           <span>50+ Courses</span>
           <span className="left-border">200+ Learners</span>
           <span className="left-border">4.5/5.0 Ratings</span>
           <span className="left-border">500+ Minutes</span>
         </div>
-      </div>
-    </div>
+      </section>
+      <footer>
+        <nav className="container">
+          <div className="footer__container" style={{ padding: "2rem 0" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <span className="footer__brand title-font">Afriverse</span>
+              <span>All rights reserved 2023</span>
+            </div>
+            <div className="footer__list">
+              <Link href="/">
+                <a className="footer__link">Want to Collabo?</a>
+              </Link>
+              <Link href="/">
+                <a className="footer__link">About Us</a>
+              </Link>
+              <Link href="/">
+                <a className="footer__link">Twitter</a>
+              </Link>
+              <button className="footer__btn">Join Discord</button>
+            </div>
+          </div>
+        </nav>
+      </footer>
+    </>
   );
 };
 
