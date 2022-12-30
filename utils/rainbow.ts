@@ -1,32 +1,21 @@
-import '@rainbow-me/rainbowkit/styles.css';
-import {
-  connectorsForWallets,
-  getDefaultWallets,
-  wallet,
-} from '@rainbow-me/rainbowkit';
-import {
-  chain,
-  configureChains,
-  createClient,
-} from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
+import "@rainbow-me/rainbowkit/styles.css";
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
+import { coinbaseWallet, metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
+
+import { chain, configureChains, createClient } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
 
 export const { chains, provider } = configureChains(
   [chain.polygonMumbai],
-  [
-    alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider()
-  ]
+  [publicProvider()]
 );
-
 
 const connectors = connectorsForWallets([
   {
-    groupName: 'Recommended',
+    groupName: "Recommended",
     wallets: [
-      wallet.coinbase({ appName: "Afriverse", chains }),
-      wallet.metaMask({ chains }),
+      coinbaseWallet({ appName: "Afriverse", chains }),
+      metaMaskWallet({ chains }),
     ],
   },
 ]);
@@ -34,5 +23,5 @@ const connectors = connectorsForWallets([
 export const wagmiClient = createClient({
   autoConnect: true,
   connectors,
-  provider
-})
+  provider,
+});
