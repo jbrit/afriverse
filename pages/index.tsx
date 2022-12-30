@@ -89,6 +89,24 @@ const Home: NextPage = () => {
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
       </section>
+      <div className="title-font ribbon-holder" style={{overflow: "hidden", position: "relative" }}>
+        <div
+        className="ribbon ribbon-left"
+        >
+          <span>50+ Courses</span>
+          <span className="left-border">200+ Learners</span>
+          <span className="left-border">4.5/5.0 Ratings</span>
+          <span className="left-border">500+ Minutes</span>
+        </div>
+        <div
+        className="ribbon ribbon-right"
+        >
+          <span>50+ Courses</span>
+          <span className="left-border">200+ Learners</span>
+          <span className="left-border">4.5/5.0 Ratings</span>
+          <span className="left-border">500+ Minutes</span>
+        </div>
+      </div>
     </div>
   );
 };
