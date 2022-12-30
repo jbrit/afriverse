@@ -5,6 +5,7 @@ import { Search } from "$svgs/search";
 import { Swoosh } from "$svgs/swoosh";
 import { ScrollDown } from "$svgs/scroll-down";
 import CourseCard from "$components/CourseCard";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +31,38 @@ const Home: NextPage = () => {
               <Link href="/">
                 <a className="navbar__link">How it works?</a>
               </Link>
-              <button className="navbar__btn">Connect Wallet</button>
+              <ConnectButton.Custom>
+                {({
+                  account,
+                  chain,
+                  openAccountModal,
+                  openConnectModal,
+                  authenticationStatus,
+                  mounted,
+                }) => {
+                  // Note: If your app doesn't use authentication, you
+                  // can remove all 'authenticationStatus' checks
+                  const ready = mounted && authenticationStatus !== "loading";
+                  const connected =
+                    ready &&
+                    account &&
+                    chain &&
+                    (!authenticationStatus ||
+                      authenticationStatus === "authenticated");
+
+
+                  return (
+                    <button
+                      onClick={() =>
+                        connected ? openAccountModal() : openConnectModal()
+                      }
+                      className="navbar__btn"
+                    >
+                      {connected ? account.displayName : "Connect Wallet"}
+                    </button>
+                  );
+                }}
+              </ConnectButton.Custom>
             </div>
           </div>
         </nav>
