@@ -80,7 +80,7 @@ const Home: NextPage = () => {
           style={{
             display: "grid",
             gap: "30px",
-            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
           <CourseCard title="Getting Started with NFTs" score={20} />
