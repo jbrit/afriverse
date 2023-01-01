@@ -167,7 +167,7 @@
 }
 
 /* ribbon section */
-.ribbon-holder{
+.ribbon-holder {
   height: 186px;
 }
 .ribbon {
@@ -183,21 +183,21 @@
   font-size: 10px;
 }
 
-.ribbon-left{
+.ribbon-left {
   transform: rotate(8deg);
 }
-.ribbon-right{
+.ribbon-right {
   transform: rotate(-8deg);
 }
 
-.ribbon-left > span:nth-child(2){
+.ribbon-left > span:nth-child(2) {
   display: none;
 }
-.ribbon-right > span:nth-child(3){
+.ribbon-right > span:nth-child(3) {
   display: none;
 }
 
-.ribbon::before{
+.ribbon::before {
   content: "";
   position: absolute;
   width: 99vw;
@@ -206,7 +206,7 @@
   left: -99vw;
   top: 0;
 }
-.ribbon::after{
+.ribbon::after {
   content: "";
   position: absolute;
   width: 99vw;
@@ -216,7 +216,7 @@
   top: 0;
 }
 
-.ribbon > span{
+.ribbon > span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,6 +224,19 @@
 
 .left-border {
   border-left: 1px #1f1f1f solid;
+}
+
+/* next section */
+.afriverse-info {
+  padding-top: 95px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.afriverse-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* footer */
@@ -251,7 +264,7 @@
   border: 2px #1f1f1f solid;
   border-bottom: 3.3px #1f1f1f solid;
   cursor: pointer;
-  background: #48B7D3;
+  background: #48b7d3;
   user-select: none;
   font-size: 16px;
   height: 48px;
@@ -260,7 +273,7 @@
 }
 
 .footer__btn:hover {
-  background: #48B7D3;
+  background: #48b7d3;
 }
 
 .footer__btn:active {
@@ -268,7 +281,7 @@
 }
 
 @media only screen and (min-width: 480px) {
-  .ribbon-holder{
+  .ribbon-holder {
     height: 216px;
   }
   .ribbon {
@@ -295,7 +308,7 @@
     margin: 0 14px;
     font-size: 16px;
   }
-  .ribbon-holder{
+  .ribbon-holder {
     height: 266px;
   }
 
@@ -333,17 +346,17 @@
     padding: 0 30px;
     margin-left: 40px;
   }
-  .ribbon-holder{
+  .ribbon-holder {
     height: 316px;
   }
-  .ribbon{
+  .ribbon {
     grid-template-columns: repeat(4, 1fr);
     font-size: 20px;
   }
-  .ribbon-left > span:nth-child(2){
+  .ribbon-left > span:nth-child(2) {
     display: flex;
   }
-  .ribbon-right > span:nth-child(3){
+  .ribbon-right > span:nth-child(3) {
     display: flex;
   }
 
@@ -366,7 +379,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .ribbon{
+  .ribbon {
     font-size: 26px;
   }
 }

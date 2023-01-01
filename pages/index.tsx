@@ -6,6 +6,7 @@ import { Swoosh } from "$svgs/swoosh";
 import { ScrollDown } from "$svgs/scroll-down";
 import CourseCard from "$components/CourseCard";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { PointingArrow } from "$svgs/pointing-arrow";
 
 const Home: NextPage = () => {
   return (
@@ -49,7 +50,6 @@ const Home: NextPage = () => {
                     chain &&
                     (!authenticationStatus ||
                       authenticationStatus === "authenticated");
-
 
                   return (
                     <button
@@ -136,6 +136,38 @@ const Home: NextPage = () => {
           <span className="left-border">200+ Learners</span>
           <span className="left-border">4.5/5.0 Ratings</span>
           <span className="left-border">500+ Minutes</span>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="afriverse-info">
+            <div
+              style={{
+                paddingLeft: "75px",
+                fontSize: "36px",
+                lineHeight: "46.8px",
+              }}
+              className="title-font"
+            >
+              Afriverse is a <span style={{ color: "#EA7B89" }}>Web3</span>{" "}
+              <span style={{ color: "#EA7B89" }}>education</span> Platform where
+              learners earn as they learn
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <PointingArrow />
+            </div>
+          </div>
+          <div className="afriverse-cards">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </section>
       <footer>
