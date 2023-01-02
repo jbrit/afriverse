@@ -139,7 +139,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div style={{paddingBottom: "90px"}} className="container">
           <div className="afriverse-info">
             <div
               style={{
@@ -164,10 +164,28 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="afriverse-cards">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className="afriverse-card">
+              <div className="afriverse-card-title">Learn-and-Earn</div>
+              <div className="afriverse-card-body">
+                Learners earn crypto incentives on completion any course.
+              </div>
+            </div>
+            <div className="afriverse-card">
+              <div className="afriverse-card-title">Build Careers</div>
+              <div className="afriverse-card-body">
+                Creators builds their careers via Afriverse, get 5% when your
+                content is taken
+              </div>
+            </div>
+            <div className="afriverse-card">
+              <div className="afriverse-card-title">Live Stream</div>
+              <div className="afriverse-card-body">
+                Creators builds their careers via Afriverse, get 5% when your
+                content is taken
+              </div>
+            </div>
           </div>
+          <hr style={{maxWidth: "772px", width: "90%", margin: "auto", border: "2px #1f1f1f solid"}} />        
         </div>
       </section>
       <footer>
