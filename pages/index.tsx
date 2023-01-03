@@ -7,6 +7,7 @@ import { ScrollDown } from "$svgs/scroll-down";
 import CourseCard from "$components/CourseCard";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { PointingArrow } from "$svgs/pointing-arrow";
+import { Mail } from "$svgs/mail";
 
 const Home: NextPage = () => {
   return (
@@ -139,7 +140,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section>
-        <div style={{paddingBottom: "90px"}} className="container">
+        <div style={{ paddingBottom: "90px" }} className="container">
           <div className="afriverse-info">
             <div
               style={{
@@ -165,28 +166,86 @@ const Home: NextPage = () => {
           </div>
           <div className="afriverse-cards">
             <div className="afriverse-card">
-              <div className="afriverse-card-title">Learn-and-Earn</div>
-              <div className="afriverse-card-body">
-                Learners earn crypto incentives on completion any course.
+              <div className="afriverse-card-main">
+                <div
+                  style={{
+                    height: "103px",
+                    width: "103px",
+                    background: "rgba(72, 183, 211, 0.2)",
+                    borderRadius: "50%",
+                    marginBottom: "2rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Mail style={{fill: "#48B7D3"}} />
+                </div>
+                <div className="afriverse-card-title">Learn-and-Earn</div>
+                <div className="afriverse-card-body">
+                  Learners earn crypto incentives on completion any course.
+                </div>
               </div>
             </div>
             <div className="afriverse-card">
-              <div className="afriverse-card-title">Build Careers</div>
-              <div className="afriverse-card-body">
-                Creators builds their careers via Afriverse, get 5% when your
-                content is taken
+              <div className="afriverse-card-main">
+                <div
+                  style={{
+                    height: "103px",
+                    width: "103px",
+                    background: "rgba(244, 184, 192, 0.2)",
+                    borderRadius: "50%",
+                    marginBottom: "2rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Mail style={{fill: "#F4B8C0"}} />
+                </div>
+                <div className="afriverse-card-title">Build Careers</div>
+                <div className="afriverse-card-body">
+                  Creators builds their careers via Afriverse, get 5% when your
+                  content is taken
+                </div>
               </div>
             </div>
             <div className="afriverse-card">
-              <div className="afriverse-card-title">Live Stream</div>
-              <div className="afriverse-card-body">
-                Creators builds their careers via Afriverse, get 5% when your
-                content is taken
+              <div className="afriverse-card-main">
+                <div
+                  style={{
+                    height: "103px",
+                    width: "103px",
+                    background: "rgba(255, 183, 0, 0.2)",
+                    borderRadius: "50%",
+                    marginBottom: "2rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Mail style={{fill: "#FFB700"}} />
+                </div>
+                <div className="afriverse-card-title">Live Stream</div>
+                <div className="afriverse-card-body">
+                  Creators builds their careers via Afriverse, get 5% when your
+                  content is taken
+                </div>
               </div>
             </div>
           </div>
-          <hr style={{maxWidth: "772px", width: "90%", margin: "auto", border: "2px #1f1f1f solid"}} />        
+          <hr
+            style={{
+              maxWidth: "772px",
+              width: "90%",
+              margin: "auto",
+              border: "2px #1f1f1f solid",
+            }}
+          />
         </div>
+      </section>
+      <section style={{ backgroundColor: "#EAF7FA" }}>
+        <div className="container" style={{ paddingTop: "78px" }}></div>
       </section>
       <footer>
         <nav className="container">

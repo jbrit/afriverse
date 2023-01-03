@@ -241,14 +241,23 @@
   margin-bottom: 90px;
 }
 
-.afriverse-card{
-  padding: 50px;
+.afriverse-card {
   border: 2px #1f1f1f solid;
   position: relative;
   text-align: center;
 }
 
-.afriverse-card:nth-child(1)::after{
+.afriverse-card-main {
+  padding: 50px;
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.afriverse-card:nth-child(1)::after {
   content: "";
   left: -7px;
   bottom: -7px;
@@ -258,7 +267,7 @@
   height: 100%;
   width: 100%;
 }
-.afriverse-card:nth-child(2)::after{
+.afriverse-card:nth-child(2)::after {
   content: "";
   left: 0;
   bottom: -7px;
@@ -267,7 +276,7 @@
   height: 100%;
   width: 100%;
 }
-.afriverse-card:nth-child(3)::after{
+.afriverse-card:nth-child(3)::after {
   content: "";
   right: -7px;
   bottom: -7px;
@@ -278,14 +287,14 @@
   width: 100%;
 }
 
-.afriverse-card-title{
+.afriverse-card-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 27.48px;
   margin-bottom: 0.5rem;
 }
 
-.afriverse-card-body{
+.afriverse-card-body {
   font-size: 18px;
   line-height: 20px;
 }
