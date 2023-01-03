@@ -13,7 +13,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useAccount, useProvider, useSigner } from "wagmi";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LessonCard from "$components/LessonCard";
 import { WorldIDWidget, VerificationResponse } from "@worldcoin/id";
 import { NFTStorage, File } from "nft.storage";

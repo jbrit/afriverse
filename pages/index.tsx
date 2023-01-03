@@ -239,7 +239,7 @@ const Home: NextPage = () => {
               maxWidth: "772px",
               width: "90%",
               margin: "auto",
-              border: "2px #1f1f1f solid",
+              border: "1px #1f1f1f solid",
             }}
           />
         </div>
