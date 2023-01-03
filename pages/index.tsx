@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                       onClick={() =>
                         connected ? openAccountModal() : openConnectModal()
                       }
-                      className="navbar__btn"
+                      className="connect__btn"
                     >
                       {connected ? account.displayName : "Connect Wallet"}
                     </button>
@@ -179,7 +179,7 @@ const Home: NextPage = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Mail style={{fill: "#48B7D3"}} />
+                  <Mail style={{ fill: "#48B7D3" }} />
                 </div>
                 <div className="afriverse-card-title">Learn-and-Earn</div>
                 <div className="afriverse-card-body">
@@ -201,7 +201,7 @@ const Home: NextPage = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Mail style={{fill: "#F4B8C0"}} />
+                  <Mail style={{ fill: "#F4B8C0" }} />
                 </div>
                 <div className="afriverse-card-title">Build Careers</div>
                 <div className="afriverse-card-body">
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Mail style={{fill: "#FFB700"}} />
+                  <Mail style={{ fill: "#FFB700" }} />
                 </div>
                 <div className="afriverse-card-title">Live Stream</div>
                 <div className="afriverse-card-body">
@@ -244,8 +244,55 @@ const Home: NextPage = () => {
           />
         </div>
       </section>
-      <section style={{ backgroundColor: "#EAF7FA" }}>
-        <div className="container" style={{ paddingTop: "78px" }}></div>
+      <section className="pre-footer" style={{ backgroundColor: "#EAF7FA" }}>
+        <div
+          className="container"
+          style={{
+            paddingTop: "78px",
+            paddingBottom: "160px",
+            display: "grid",
+            gridTemplateColumns: "786fr 464fr",
+          }}
+        >
+          <div
+            className="title-font"
+            style={{
+              paddingLeft: "150px",
+              fontSize: "36px",
+              lineHeight: "130%",
+            }}
+          >
+            <p style={{ marginBottom: "2rem" }}>
+              Getting Started is as easy as connecting your wallet
+            </p>
+            <button style={{ marginLeft: "0px" }} className="connect__btn">
+              Connect Wallet
+            </button>
+          </div>
+          <div>
+            <div style={{paddingLeft: "5rem"}}>
+              <div
+                style={{
+                  width: "232px",
+                  height: "232px",
+                  borderRadius: "50%",
+                  background: "#48B7D3",
+                  border: "2px black solid"
+                }}
+                ></div>
+              <div
+                style={{
+                  width: "232px",
+                  height: "187px",
+                  marginTop: "-116px",
+                  background: "#48B7D3",
+                  border: "2px black solid",
+                  borderTop: "none"
+                }}
+              ></div>
+            </div>
+          </div>
+        </div>
       </section>
       <footer>
         <nav className="container">

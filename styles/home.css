@@ -74,7 +74,7 @@
   display: none;
 }
 
-.navbar__btn {
+.connect__btn {
   border: 2px #1f1f1f solid;
   border-bottom: 3.3px #1f1f1f solid;
   cursor: pointer;
@@ -86,11 +86,11 @@
   margin-left: 20px;
 }
 
-.navbar__btn:hover {
+.connect__btn:hover {
   background: #f2ad00;
 }
 
-.navbar__btn:active {
+.connect__btn:active {
   border-bottom: 2px #1f1f1f solid;
 }
 
@@ -299,6 +299,14 @@
   line-height: 20px;
 }
 
+.pre-footer {
+  background-color: #eaf7fa;
+  position: relative;
+  z-index: 0;
+  background: url("../public/blue-grid.svg"), linear-gradient(#eaf7fa, #eaf7fa);
+  background-attachment: fixed;
+}
+
 /* footer */
 .footer__brand {
   font-weight: 800;
@@ -400,7 +408,7 @@
     line-height: 21px;
   }
 
-  .navbar__btn {
+  .connect__btn {
     font-size: 18px;
     height: 64px;
     padding: 0 30px;
