@@ -95,9 +95,9 @@ const Explore: NextPage = () => {
         <Navbar />
         <div className="container">
           <div className="hero-text title-font">
-            <div>Welcome Let's</div>
+            <div>Welcome Let&apos;s</div>
             <div>
-              start <span style={{color: "#2C9DB9"}}>learning!</span>
+              start <span style={{ color: "#2C9DB9" }}>learning!</span>
             </div>
           </div>
           <form className="search-bar">
@@ -124,6 +124,43 @@ const Explore: NextPage = () => {
           }}
         />
       </header>
+      <div style={{marginBottom: "90px"}}></div>
+      <section style={{marginBottom: "100px"}}>
+        <div className="container title-font section-header" style={{ marginBottom: "30px" }}>
+          Recommended for you
+        </div>
+        <div
+          className="container"
+          style={{
+            display: "grid",
+            gap: "30px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          }}
+        >
+          <CourseCard title="Getting Started with NFTs" score={20} />
+          <CourseCard title="All to know about Airdrops" score={35} />
+          <CourseCard title="Metaverse Crash Course" score={15} />
+          <CourseCard title="Beginner's Guide to Defi" score={90} />
+        </div>
+      </section>
+      <section>
+        <div className="container title-font section-header" style={{ marginBottom: "30px" }}>
+          Trending DeFi Course
+        </div>
+        <div
+          className="container"
+          style={{
+            display: "grid",
+            gap: "30px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          }}
+        >
+          <CourseCard title="Getting Started with NFTs" score={20} />
+          <CourseCard title="All to know about Airdrops" score={35} />
+          <CourseCard title="Metaverse Crash Course" score={15} />
+          <CourseCard title="Beginner's Guide to Defi" score={90} />
+        </div>
+      </section>
     </div>
   );
 };

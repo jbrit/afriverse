@@ -1,7 +1,12 @@
 .general-header {
-    background-color: #EAF7FA;
-    position: relative;
-    z-index: 0;
-    background: url("../public/blue-grid.svg"), linear-gradient(#EAF7FA, #EAF7FA);
-    background-attachment: fixed;
-  }
+  background-color: #eaf7fa;
+  position: relative;
+  z-index: 0;
+  background: url("../public/blue-grid.svg"), linear-gradient(#eaf7fa, #eaf7fa);
+  background-attachment: fixed;
+}
+
+.section-header{
+    font-size: 32px;
+    line-height: 38.4px;
+}
