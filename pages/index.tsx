@@ -9,6 +9,7 @@ import CourseCard from "$components/CourseCard";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { PointingArrow } from "$svgs/pointing-arrow";
 import { Mail } from "$svgs/mail";
+import { ScrollUp } from "$svgs/scroll-up";
 
 const Home: NextPage = () => {
   return (
@@ -253,8 +254,10 @@ const Home: NextPage = () => {
             paddingBottom: "160px",
             display: "grid",
             gridTemplateColumns: "786fr 464fr",
+            position: "relative"
           }}
         >
+          <ScrollUp style={{position: "absolute", top: "-45.5px", right: "54px"}} />
           <div
             className="title-font"
             style={{
@@ -340,6 +343,17 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <div
+          style={{
+            height: "160px",
+            position: "absolute",
+            left: 0,
+            bottom: "-80px",
+            width: "100%",
+            background: "white",
+            borderRadius: "100%",
+          }}
+        ></div>
       </section>
       <footer>
         <nav className="container">
