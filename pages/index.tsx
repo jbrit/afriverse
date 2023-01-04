@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { Search } from "$svgs/search";
 import { Swoosh } from "$svgs/swoosh";
@@ -270,26 +271,72 @@ const Home: NextPage = () => {
             </button>
           </div>
           <div>
-            <div style={{paddingLeft: "5rem"}}>
+            <div style={{ paddingLeft: "5rem", position: "relative" }}>
               <div
                 style={{
                   width: "232px",
                   height: "232px",
                   borderRadius: "50%",
                   background: "#48B7D3",
-                  border: "2px black solid"
+                  border: "2px #1f1f1f solid",
+                  position: "relative",
                 }}
-                ></div>
+              ></div>
               <div
                 style={{
                   width: "232px",
                   height: "187px",
                   marginTop: "-116px",
                   background: "#48B7D3",
-                  border: "2px black solid",
-                  borderTop: "none"
+                  border: "2px #1f1f1f solid",
+                  borderTop: "0px",
+                  position: "relative",
                 }}
               ></div>
+              <div
+                style={{
+                  width: "232px",
+                  height: "232px",
+                  borderRadius: "50%",
+                  background: "#1f1f1f",
+                  border: "2px #1f1f1f solid",
+                  position: "absolute",
+                  top: "5px",
+                  left: "85px",
+                  zIndex: -1,
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "232px",
+                  height: "187px",
+                  background: "#1f1f1f",
+                  border: "2px #1f1f1f solid",
+                  borderTop: "none",
+                  position: "absolute",
+                  zIndex: -1,
+                  left: "85px",
+                  top: "122px",
+                }}
+              ></div>
+              <div
+                style={{
+                  position: "absolute",
+                  height: "calc(100%-4px)",
+                  width: "232px",
+                  bottom: 2,
+                  display: "flex",
+                  alignItems: "end",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src="/woman.png"
+                  alt="Picture of woman smiling"
+                  width={232}
+                  height={232}
+                />
+              </div>
             </div>
           </div>
         </div>
