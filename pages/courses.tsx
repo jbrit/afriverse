@@ -12,6 +12,7 @@ import { AFCT_ADDR, nftContract } from "contract-factory";
 import { defaultAbiCoder as abi } from "@ethersproject/abi";
 import Moralis from "$utils/moralis";
 import { Search } from "$svgs/search";
+import Footer from "$components/Footer";
 
 const keyA =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGRFOUM2NDAyODVBNEI3MjEwN2Q2MEMwZj";
@@ -82,7 +83,7 @@ const Explore: NextPage = () => {
   }
 
   return (
-    <div>
+    <>
       <Head>
         <title>Afriverse</title>
         <meta
@@ -124,9 +125,12 @@ const Explore: NextPage = () => {
           }}
         />
       </header>
-      <div style={{marginBottom: "90px"}}></div>
-      <section style={{marginBottom: "100px"}}>
-        <div className="container title-font section-header" style={{ marginBottom: "30px" }}>
+      <div style={{ marginBottom: "90px" }}></div>
+      <section style={{ marginBottom: "100px" }}>
+        <div
+          className="container title-font section-header"
+          style={{ marginBottom: "30px" }}
+        >
           Recommended for you
         </div>
         <div
@@ -143,12 +147,14 @@ const Explore: NextPage = () => {
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
       </section>
-      <section>
-        <div className="container title-font section-header" style={{ marginBottom: "30px" }}>
+      <section className="container">
+        <div
+          className="title-font section-header"
+          style={{ marginBottom: "30px" }}
+        >
           Trending DeFi Course
         </div>
         <div
-          className="container"
           style={{
             display: "grid",
             gap: "30px",
@@ -160,8 +166,10 @@ const Explore: NextPage = () => {
           <CourseCard title="Metaverse Crash Course" score={15} />
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
+        <hr style={{ marginTop: "196px", border: "1px #1f1f1f solid" }} />
       </section>
-    </div>
+      <Footer />
+    </>
   );
 };
 
