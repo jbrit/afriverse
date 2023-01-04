@@ -141,9 +141,9 @@ const Explore: NextPage = () => {
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
-          <CourseCard title="Getting Started with NFTs" score={20} />
-          <CourseCard title="All to know about Airdrops" score={35} />
-          <CourseCard title="Metaverse Crash Course" score={15} />
+          <CourseCard title="Getting Started with NFTs" buttonColor="pink" score={20} />
+          <CourseCard title="All to know about Airdrops" buttonColor="blue" score={35} />
+          <CourseCard title="Metaverse Crash Course" buttonColor="pink" score={15} />
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
       </section>
@@ -161,9 +161,9 @@ const Explore: NextPage = () => {
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
-          <CourseCard title="Getting Started with NFTs" score={20} />
-          <CourseCard title="All to know about Airdrops" score={35} />
-          <CourseCard title="Metaverse Crash Course" score={15} />
+          <CourseCard title="Getting Started with NFTs" buttonColor="pink" score={20} />
+          <CourseCard title="All to know about Airdrops" buttonColor="blue" score={35} />
+          <CourseCard title="Metaverse Crash Course" buttonColor="pink" score={15} />
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
         <hr style={{ marginTop: "196px", border: "1px #1f1f1f solid" }} />

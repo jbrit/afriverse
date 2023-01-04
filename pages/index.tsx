@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { Search } from "$svgs/search";
 import { Swoosh } from "$svgs/swoosh";
 import { ScrollDown } from "$svgs/scroll-down";
 import CourseCard from "$components/CourseCard";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { PointingArrow } from "$svgs/pointing-arrow";
 import { Mail } from "$svgs/mail";
 import { ScrollUp } from "$svgs/scroll-up";
@@ -75,9 +73,21 @@ const Home: NextPage = () => {
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
-          <CourseCard title="Getting Started with NFTs" score={20} />
-          <CourseCard title="All to know about Airdrops" score={35} />
-          <CourseCard title="Metaverse Crash Course" score={15} />
+          <CourseCard
+            title="Getting Started with NFTs"
+            buttonColor="pink"
+            score={20}
+          />
+          <CourseCard
+            title="All to know about Airdrops"
+            buttonColor="blue"
+            score={35}
+          />
+          <CourseCard
+            title="Metaverse Crash Course"
+            buttonColor="pink"
+            score={15}
+          />
           <CourseCard title="Beginner's Guide to Defi" score={90} />
         </div>
       </section>

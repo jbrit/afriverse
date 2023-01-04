@@ -167,6 +167,28 @@
   border-bottom: 2px #1f1f1f solid;
 }
 
+.btn-pink {
+  background: #f4b8c0;
+}
+.btn-pink:hover {
+  background: #f4b8c0;
+}
+
+.btn-blue {
+  background: #48B7D3;
+}
+.btn-blue:hover {
+  background: #48B7D3;
+}
+
+.btn-secondary {
+  background: #B1D0FE;
+  opacity: 0.6;
+}
+.btn-secondary:hover {
+  background: #B1D0FE;
+}
+
 /* ribbon section */
 .ribbon-holder {
   height: 186px;
