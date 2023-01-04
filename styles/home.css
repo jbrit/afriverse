@@ -8,7 +8,7 @@
 
 .hero-text {
   margin: 154px auto 95px;
-  max-width: 740px;
+  max-width: 751px;
   font-size: 32px;
   text-align: center;
   font-weight: 400;
@@ -393,7 +393,8 @@
 
 @media only screen and (min-width: 900px) {
   .hero-text {
-    font-size: 52px;
+    font-size: 51.78px;
+    line-height: 62.13px;
   }
   .search-bar {
     height: 94px;

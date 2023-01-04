@@ -1,0 +1,7 @@
+.general-header {
+    background-color: #EAF7FA;
+    position: relative;
+    z-index: 0;
+    background: url("../public/blue-grid.svg"), linear-gradient(#EAF7FA, #EAF7FA);
+    background-attachment: fixed;
+  }

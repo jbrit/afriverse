@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/home.css";
+import "../styles/courses.css";
 import type { AppProps } from "next/app";
 // import { Web3ReactProvider } from "@web3-react/core";
 // import { Web3Provider } from "@ethersproject/providers";

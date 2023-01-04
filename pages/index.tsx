@@ -10,6 +10,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { PointingArrow } from "$svgs/pointing-arrow";
 import { Mail } from "$svgs/mail";
 import { ScrollUp } from "$svgs/scroll-up";
+import Navbar from "$components/Navbar";
 
 const Home: NextPage = () => {
   return (
@@ -23,52 +24,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="home-header">
-        <nav className="navbar">
-          <div className="container navbar__container">
-            <span className="navbar__brand title-font">Afriverse</span>
-            <div className="navbar__list">
-              <Link href="/">
-                <a className="navbar__link" style={{ fontWeight: 700 }}>
-                  Home
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="navbar__link">How it works?</a>
-              </Link>
-              <ConnectButton.Custom>
-                {({
-                  account,
-                  chain,
-                  openAccountModal,
-                  openConnectModal,
-                  authenticationStatus,
-                  mounted,
-                }) => {
-                  // Note: If your app doesn't use authentication, you
-                  // can remove all 'authenticationStatus' checks
-                  const ready = mounted && authenticationStatus !== "loading";
-                  const connected =
-                    ready &&
-                    account &&
-                    chain &&
-                    (!authenticationStatus ||
-                      authenticationStatus === "authenticated");
-
-                  return (
-                    <button
-                      onClick={() =>
-                        connected ? openAccountModal() : openConnectModal()
-                      }
-                      className="connect__btn"
-                    >
-                      {connected ? account.displayName : "Connect Wallet"}
-                    </button>
-                  );
-                }}
-              </ConnectButton.Custom>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
         <div className="container">
           <p className="hero-text title-font">
             <div> Unlimited access to</div>
@@ -254,10 +210,12 @@ const Home: NextPage = () => {
             paddingBottom: "160px",
             display: "grid",
             gridTemplateColumns: "786fr 464fr",
-            position: "relative"
+            position: "relative",
           }}
         >
-          <ScrollUp style={{position: "absolute", top: "-45.5px", right: "54px"}} />
+          <ScrollUp
+            style={{ position: "absolute", top: "-45.5px", right: "54px" }}
+          />
           <div
             className="title-font"
             style={{
