@@ -7,7 +7,9 @@ const Navbar = (props: Props) => {
   return (
     <nav className="navbar">
       <div className="container navbar__container">
-        <span className="navbar__brand title-font">Afriverse</span>
+        <Link href="/">
+          <span className="navbar__brand title-font">Afriverse</span>
+        </Link>
         <div className="navbar__list">
           <Link href="/">
             <a className="navbar__link" style={{ fontWeight: 700 }}>
