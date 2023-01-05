@@ -21,7 +21,7 @@ const keyB =
 
 const gateway = "https://nftstorage.link/ipfs/";
 
-const Explore: NextPage = () => {
+const Courses: NextPage = () => {
   const signer = useSigner();
   const o = useProvider();
   const provider = signer.data ?? o;
@@ -173,4 +173,4 @@ const Explore: NextPage = () => {
   );
 };
 
-export default Explore;
+export default Courses;
