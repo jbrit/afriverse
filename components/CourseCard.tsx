@@ -1,3 +1,4 @@
+import router from "next/router";
 import React from "react";
 
 type Props = {
@@ -18,9 +19,18 @@ const CourseCard: React.FC<Props> = ({ title, score, buttonColor }) => {
             gridTemplateColumns: "1fr 7px 1fr",
           }}
         >
-          <button className={buttonColor ? `small-btn btn-${buttonColor}` : "small-btn" }>View Lesson</button>
+          <button
+            onClick={() => router.push("/courses/example")}
+            className={
+              buttonColor ? `small-btn btn-${buttonColor}` : "small-btn"
+            }
+          >
+            View Lesson
+          </button>
           <span />
-          <button className="small-btn btn-secondary">Claim {score} AFET</button>
+          <button className="small-btn btn-secondary">
+            Claim {score} AFET
+          </button>
         </div>
       </div>
     </div>

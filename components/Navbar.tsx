@@ -11,13 +11,13 @@ const Navbar = (props: Props) => {
           <span className="navbar__brand title-font">Afriverse</span>
         </Link>
         <div className="navbar__list">
-          <Link href="/">
-            <a className="navbar__link" style={{ fontWeight: 700 }}>
-              Home
+          <Link href="/courses">
+            <a className="navbar__link">
+              Explore
             </a>
           </Link>
-          <Link href="/courses">
-            <a className="navbar__link">How it works?</a>
+          <Link href="/courses/create">
+            <a className="navbar__link">Create Content</a>
           </Link>
           <ConnectButton.Custom>
             {({
