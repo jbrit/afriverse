@@ -11,6 +11,7 @@ import { NFTStorage, File } from "nft.storage";
 import { AFCT_ADDR, nftContract } from "contract-factory";
 import { defaultAbiCoder as abi } from "@ethersproject/abi";
 import Moralis from "$utils/moralis";
+import CourseFooter from "$components/CourseFooter";
 
 const CourseDetail: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const CourseDetail: NextPage = () => {
       <header className="general-header">
         <Navbar />
       </header>
+      <CourseFooter />
     </>
   );
 };
