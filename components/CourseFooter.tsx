@@ -1,8 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
-type Props = {};
+type Props = {
+  percent: number;
+};
 
-const CourseFooter = (props: Props) => {
+const CourseFooter: FC<Props> = ({ percent }) => {
   return (
     <footer
       style={{
@@ -36,7 +38,7 @@ const CourseFooter = (props: Props) => {
               color: "rgba(31, 31, 31, 0.67)",
             }}
           >
-            Not Started
+            {percent === 0 ? "Not Started" : percent + "%"}
           </div>
         </div>
         <div>

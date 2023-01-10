@@ -27,7 +27,7 @@ const CourseDetail: NextPage = () => {
       <header className="general-header">
         <Navbar />
       </header>
-      <CourseFooter />
+      <CourseFooter percent={0} />
     </>
   );
 };
