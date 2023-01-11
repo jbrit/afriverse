@@ -27,6 +27,47 @@ const CourseDetail: NextPage = () => {
       <header className="general-header">
         <Navbar />
       </header>
+      <div
+        className="container"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "260px 720px",
+          gridGap: "50px",
+          paddingTop: "67px",
+        }}
+      >
+        <aside>
+          {/* single section */}
+          <div>
+            <div
+              style={{
+                textTransform: "uppercase",
+                fontSize: "24px",
+                lineHeight: "27.48px",
+                fontWeight: 500,
+                marginBottom: "12px",
+              }}
+            >
+              Introduction
+            </div>
+            <div
+              style={{
+                marginBottom: "12px",
+                fontSize: "22px",
+                lineHeight: "25px",
+                color: "rgba(31, 31, 31, 0.47)",
+              }}
+            >
+              What is an NFT?
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div className="title-font" style={{ fontSize: "42px", fontWeight: 500 }}>
+            Beginner's Guide to NFT
+          </div>
+        </main>
+      </div>
       <CourseFooter percent={0} />
     </>
   );
