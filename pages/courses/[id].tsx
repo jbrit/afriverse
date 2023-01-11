@@ -64,7 +64,7 @@ const CourseDetail: NextPage = () => {
         </aside>
         <main>
           <div className="title-font" style={{ fontSize: "42px", fontWeight: 500 }}>
-            Beginner's Guide to NFT
+            Beginner&apos;s Guide to NFT
           </div>
         </main>
       </div>
