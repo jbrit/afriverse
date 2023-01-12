@@ -63,8 +63,92 @@ const CourseDetail: NextPage = () => {
           </div>
         </aside>
         <main>
-          <div className="title-font" style={{ fontSize: "42px", fontWeight: 500 }}>
+          <div
+            className="title-font"
+            style={{
+              fontSize: "42px",
+              marginBottom: "1.5rem",
+            }}
+          >
             Beginner&apos;s Guide to NFT
+          </div>
+          <div style={{ position: "relative", zIndex: 0 }}>
+            <div
+              style={{
+                border: "2px solid #1F1F1F",
+                height: "358px",
+                marginBottom: "45px",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#D9D9D9",
+                  border: "14px solid white",
+                  height: "100%",
+                }}
+              ></div>
+            </div>
+            {/* after */}
+            <div
+              style={{
+                zIndex: -1,
+                position: "absolute",
+                background: "#1f1f1f",
+                height: "100%",
+                width: "100%",
+                right: "-8px",
+                bottom: "-8px",
+              }}
+            />
+          </div>
+          <div
+            className="title-font"
+            style={{ fontSize: "25.96px", marginBottom: "1rem" }}
+          >
+            About this course
+          </div>
+          <p
+            style={{
+              fontSize: "26px",
+              lineHeight: "30px",
+              fontWeight: 300,
+              marginBottom: "20px",
+            }}
+          >
+            Ever wondered why the whole buzz around Non-Fungible Tokens aka NFT?
+            This course contains all you...{" "}
+            <span
+              style={{
+                color: "#2664DD",
+                cursor: "pointer",
+                userSelect: "none",
+              }}
+            >
+              Read more
+            </span>
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                color: "rgba(31, 31, 31, 0.87)",
+                fontSize: "26px",
+                lineHeight: "30px",
+              }}
+            >
+              15 hrs
+            </div>
+            <button
+              style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
+              className="small-btn btn-secondary"
+            >
+              Claim 20 AFET
+            </button>
           </div>
         </main>
       </div>
