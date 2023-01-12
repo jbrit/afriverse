@@ -44,78 +44,93 @@ const CreateCourse: NextPage = () => {
         </aside>
         <main>
           {/* course landing started */}
-          <div
-            className="title-font"
-            style={{
-              fontSize: "28px",
-              lineHeight: "33.6px",
-              marginBottom: "1.5rem",
-            }}
-          >
-            Course Landing
-          </div>
-          <div className="title-font" style={{ marginBottom: "10px" }}>
-            Course Title
-          </div>
-          <div>
-            <input
-              className="quick-input"
-              type="text"
-              placeholder="Insert your course title"
-            />
-          </div>
-          <div className="title-font" style={{ marginBottom: "10px" }}>
-            Course Description
-          </div>
-          <div>
-            <textarea
-              className="quick-input"
-              name="description"
-              id="description"
-              rows={10}
-              placeholder="Insert your course description"
-            ></textarea>
-          </div>
-          <div className="title-font" style={{ marginBottom: "10px" }}>
-            Cover Image
-          </div>
-          <div>
+          <>
             <div
+              className="title-font"
               style={{
-                border: "1px dashed #1F1F1F",
-                height: "358px",
-                marginBottom: "45px",
+                fontSize: "28px",
+                lineHeight: "33.6px",
+                marginBottom: "1.5rem",
               }}
             >
+              Course Landing
+            </div>
+            <div className="title-font" style={{ marginBottom: "10px" }}>
+              Course Title
+            </div>
+            <div>
+              <input
+                className="quick-input"
+                type="text"
+                placeholder="Insert your course title"
+              />
+            </div>
+            <div className="title-font" style={{ marginBottom: "10px" }}>
+              Course Description
+            </div>
+            <div>
+              <textarea
+                className="quick-input"
+                name="description"
+                id="description"
+                rows={10}
+                placeholder="Insert your course description"
+              ></textarea>
+            </div>
+            <div className="title-font" style={{ marginBottom: "10px" }}>
+              Cover Image
+            </div>
+            <div>
               <div
                 style={{
-                  backgroundColor: "#D9D9D9",
-                  border: "14px solid white",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  border: "1px dashed #1F1F1F",
+                  height: "358px",
+                  marginBottom: "45px",
                 }}
               >
-                Click{" "}
-                <button
+                <div
                   style={{
-                    background: "transparent",
-                    border: "none",
-                    cursor: "pointer",
-                    color: "rgba(38,100,221, 0.87)",
-                    fontSize: "16px",
+                    backgroundColor: "#D9D9D9",
+                    border: "14px solid white",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  here
-                </button>{" "}
-                to upload image
-                <input style={{ display: "none" }} type="file" />
+                  Click{" "}
+                  <button
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      cursor: "pointer",
+                      color: "rgba(38,100,221, 0.87)",
+                      fontSize: "16px",
+                    }}
+                  >
+                    here
+                  </button>{" "}
+                  to upload image
+                  <input style={{ display: "none" }} type="file" />
+                </div>
               </div>
             </div>
-          </div>
+          </>
           {/* course landing ended */}
+          <hr style={{margin: "5rem 0", borderStyle: "dashed"}} />
           {/* course structure started */}
+          <>
+            <div
+              className="title-font"
+              style={{
+                fontSize: "28px",
+                lineHeight: "33.6px",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Course Structure
+            </div>
+          </>
           {/* course structure ended */}
           {/* course video upload started */}
           {/* course video upload ended */}
