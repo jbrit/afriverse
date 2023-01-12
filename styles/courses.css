@@ -10,3 +10,13 @@
     font-size: 32px;
     line-height: 38.4px;
 }
+
+.quick-input{
+  border: 1px solid #1F1F1F;
+  background: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 18px 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
