@@ -63,9 +63,8 @@ const Explore: NextPage = () => {
       enabled: !!address,
     }
   );
-  const [afctBalance, setAFCTBalance] = useState<
-    typeof balance | Array<{ value: string }>
-  >(balance);
+  type BalanceType =  Array<{ value: string }> | typeof balance;
+  const afctBalance: BalanceType = balance;
 
   async function storeAsset(image: File) {
     setImageUrl(null);
@@ -127,8 +126,9 @@ const Explore: NextPage = () => {
                     <>
                       AFCT Balance:{" "}
                       {afctBalance &&
-                        (afctBalance as Array<{ value: string }>).map(({ value }) => (
-                          <span key={value}>{value}</span>))}
+                        (afctBalance as Array<{ value: string }>).map(
+                          ({ value }) => <span key={value}>{value}</span>
+                        )}
                     </>
                   </Text>
                   <Text h4>
